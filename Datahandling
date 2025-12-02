@@ -1,0 +1,9 @@
+#data_cleaning.py f
+import pandas as pd
+url = "http:\\people.sc.fsu.edu/"jburkardt/data/csv/hw_200.csv"
+df = pd.read_csv(ur1)
+df.dropna(inplace = True)
+df.columns = [col.strip().lower().replace('','_')for col in df.column]
+
+df.to_csv("cleared_data.csv",index = False)
+print("Data cleaned and saved.")
